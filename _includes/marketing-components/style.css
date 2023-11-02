@@ -1,0 +1,69 @@
+@font-face {
+	font-family: TT Norms Pro;
+	src: url(/fonts/tt-norms-pro/regular.woff2) format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: TT Norms Pro;
+	src: url(/fonts/tt-norms-pro/bold.woff2) format("woff2");
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap
+}
+
+:root {
+	--demo-primary: #034AD8;
+	--demo-secondary: #fff;
+	--demo-font-family: TT Norms Pro, system-ui, sans-serif;
+}
+
+body {
+	font-family: system-ui, sans-serif;
+	margin: 0 auto;
+	padding: .5em;
+	max-width: 64em;
+}
+h1, h2, h3, h4, h5 {
+	font-family: var(--demo-font-family);
+	font-weight: 800;
+}
+
+.demo-hed {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1em 2em;
+	margin-bottom: 1em;
+}
+.demo-hed-title {
+	margin: 0;
+}
+.demo-hed-logo {
+	display: flex;
+}
+.demo-nav {
+	flex-grow: 1;
+	display: flex;
+	justify-content: flex-end;
+}
+.demo-nav-btn {
+	display: block;
+	width: 100%;
+	background-color: var(--demo-primary);
+	font-weight: 800;
+	color: var(--demo-secondary);
+	font-family: var(--demo-font-family);
+	padding: .5em .75em;
+	border-radius: .5em;
+	text-decoration: none;
+	text-align: center;
+}
+@media (min-width: 25em) {
+	.demo-nav-btn {
+		display: inline;
+		width: auto;
+	}
+}
