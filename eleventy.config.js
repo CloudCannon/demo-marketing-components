@@ -1,5 +1,5 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
-    "public/": "/"
+    "_includes/marketing-components/public/": "/"
   })
 };
