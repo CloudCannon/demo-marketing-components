@@ -15,6 +15,7 @@
 }
 
 :root {
+	--demo-gutter: .5rem;
 	--demo-primary: #034AD8;
 	--demo-secondary: #fff;
 	--demo-footer: #4b5563;
@@ -35,8 +36,8 @@ html {
 }
 body {
 	font-family: system-ui, sans-serif;
-	margin: 1em auto;
-	padding: .5em;
+	margin: 0 auto;
+	padding: 0 var(--demo-gutter);
 	max-width: 64em;
 	min-height: 100vh;
 }
@@ -78,8 +79,8 @@ textarea, select {
 }
 @media (min-width: 68.75em) {
 	.demo-main {
-		margin-left: -.75em;
-		margin-right: -.75em;
+		margin-left: calc(-1 * var(--demo-gutter));
+		margin-right: calc(-1 * var(--demo-gutter));
 	}
 }
 
@@ -88,7 +89,7 @@ textarea, select {
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 1em 2em;
-	margin-bottom: 1em;
+	margin: 1em 0;
 }
 .demo-hed > * {
 	flex-grow: 1;
@@ -125,6 +126,7 @@ textarea, select {
 }
 
 .demo-footer {
+	margin: 1rem 0;
 	font-size: .875em;
 	color: var(--demo-footer);
 }
@@ -134,4 +136,33 @@ textarea, select {
 	gap: .5em 1em;
 	padding: 0;
 	margin: 0;
+}
+
+.demo-banner {
+	display: block;
+	text-align: center;
+	background-color: var(--demo-primary);
+	color: var(--demo-secondary);
+	text-decoration: none;
+	padding: .5em;
+	padding-left: var(--demo-gutter);
+	padding-right: var(--demo-gutter);
+	margin-left: calc(-1 * var(--demo-gutter));
+	margin-right: calc(-1 * var(--demo-gutter));
+	margin-bottom: calc(3 * var(--demo-gutter));
+	line-height: 1.4;
+}
+.demo-banner:hover,
+.demo-banner:active {
+	text-decoration: underline;;
+}
+.demo-banner:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 2.5em;
+	background-color: inherit;
+	z-index: -1;
 }

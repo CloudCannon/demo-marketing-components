@@ -2,6 +2,9 @@
 metadata:
   title: Title
   description: Description
+  banner:
+    text: "New video: <strong>Jamming on the Jamstack with Matt Biilman & Mike Neumegen</strong>"
+    url: https://www.youtube.com/watch?v=Hf8lsVtOkcE
   cta:
     text: Button
     url: /
@@ -19,6 +22,9 @@ metadata:
   </head>
   <body>
     <header>
+{% if metadata.banner %}
+      <a href="{{ metadata.banner.url }}" class="demo-banner">{{ metadata.banner.text }}</a>
+{% endif %}
       <div class="demo-hed">
         <a href="https://cloudcannon.com/" class="demo-hed-logo">{% include "marketing-components/logo.svg" %}</a>
   
