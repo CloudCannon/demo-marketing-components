@@ -18,21 +18,28 @@ metadata:
     </style>
   </head>
   <body>
-    <header class="demo-hed">
-      <a href="https://cloudcannon.com/" class="demo-hed-logo">{% include "marketing-components/logo.svg" %}</a>
+    <header>
+      <div class="demo-hed">
+        <a href="https://cloudcannon.com/" class="demo-hed-logo">{% include "marketing-components/logo.svg" %}</a>
+  
+        <nav class="demo-nav">
+          <a href="{{ metadata.cta.url }}" class="demo-nav-btn">{{ metadata.cta.text }}</a>
+        </nav>
+      </div>
 
       <h1 class="demo-hed-title">{{ metadata.title }}</h1>
-
-      <nav class="demo-nav">
-        <a href="{{ metadata.cta.url }}" class="demo-nav-btn">{{ metadata.cta.text }}</a>
-      </nav>
     </header>
-    <main>
-      Default content.
+    <main class="demo-main">
       {{ content }}
     </main>
-    <footer>
-      <!-- TODO links -->
+    <footer class="demo-footer">
+      <ul>
+        <li>© 2023 Cloud Cannon Ltd.</li>
+        <li><a href="https://cloudcannon.com/terms/">Terms</a></li>
+        <li><a href="https://cloudcannon.com/privacy/">Privacy</a></li>
+        <li><a href="https://cloudcannon.com/gdpr/">GDPR</a></li>
+        <li><a href="https://cloudcannon.com/security/">Security</a></li>
+      </ul>
     </footer>
   </body>
 </html>

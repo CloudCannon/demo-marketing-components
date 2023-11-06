@@ -17,18 +17,70 @@
 :root {
 	--demo-primary: #034AD8;
 	--demo-secondary: #fff;
+	--demo-footer: #4b5563;
+	--demo-page-background: #fafafa;
 	--demo-font-family: TT Norms Pro, system-ui, sans-serif;
 }
 
+/* Defaults, some borrowed from https://andy-bell.co.uk/a-more-modern-css-reset/ */
+* {
+	box-sizing: border-box;
+}
+html {
+	-moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+	background-color: var(--demo-page-background);
+	overflow-y: scroll;
+}
 body {
 	font-family: system-ui, sans-serif;
-	margin: 0 auto;
+	margin: 1em auto;
 	padding: .5em;
 	max-width: 64em;
+	min-height: 100vh;
+}
+
+/* Defaults */
+ul,
+ol {
+  list-style-type: "";
 }
 h1, h2, h3, h4, h5 {
 	font-family: var(--demo-font-family);
 	font-weight: 800;
+	text-wrap: balance;
+}
+p:first-of-type {
+	margin-top: 0;
+}
+p:last-of-type {
+	margin-bottom: 0;
+}
+a:where([href]) {
+	color: inherit;
+}
+input, button,
+textarea, select {
+  font: inherit;
+}
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Demo Styles */
+.demo-main {
+	padding: .75em;
+	background-color: var(--demo-secondary);
+	border: 1px solid #ddd;
+	border-radius: .75em;
+	margin: 1em 0;
+}
+@media (min-width: 68.75em) {
+	.demo-main {
+		margin-left: -.75em;
+		margin-right: -.75em;
+	}
 }
 
 .demo-hed {
@@ -38,14 +90,18 @@ h1, h2, h3, h4, h5 {
 	gap: 1em 2em;
 	margin-bottom: 1em;
 }
+.demo-hed > * {
+	flex-grow: 1;
+}
 .demo-hed-title {
+	flex-grow: 9999;
 	margin: 0;
 }
 .demo-hed-logo {
 	display: flex;
 }
+
 .demo-nav {
-	flex-grow: 1;
 	display: flex;
 	justify-content: flex-end;
 }
@@ -56,14 +112,26 @@ h1, h2, h3, h4, h5 {
 	font-weight: 800;
 	color: var(--demo-secondary);
 	font-family: var(--demo-font-family);
-	padding: .5em .75em;
+	padding: .5em 1.5em;
 	border-radius: .5em;
 	text-decoration: none;
 	text-align: center;
 }
-@media (min-width: 25em) {
+@media (min-width: 37.5em) {
 	.demo-nav-btn {
 		display: inline;
 		width: auto;
 	}
+}
+
+.demo-footer {
+	font-size: .875em;
+	color: var(--demo-footer);
+}
+.demo-footer ul {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
 }
