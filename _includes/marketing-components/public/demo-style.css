@@ -15,11 +15,24 @@
 }
 
 :root {
-	--demo-gutter: .5rem;
-	--demo-primary: #034AD8;
-	--demo-secondary: #fff;
-	--demo-footer: #4b5563;
-	--demo-page-background: #fafafa;
+	--demo-gutter: .75rem;
+	--demo-primary: hsl(220deg 97.26% 42.94%);
+	--demo-primary-oppo: hsl(0deg 0% 100%);
+
+	--demo-logo: var(--demo-primary);
+	--demo-secondary: hsl(0deg 0% 100%);
+	--demo-secondary-minor: hsl(0deg 0% 97.04%);
+	--demo-secondary-oppo: hsl(0deg 0% 12.94%);
+	--demo-border: hsl(0deg 0% 80%);
+/*
+	--demo-logo: hsl(0deg 0% 100%);
+	--demo-secondary: hsl(0deg 0% 7%);
+	--demo-secondary-minor: hsl(0deg 0% 0%);
+	--demo-secondary-oppo: hsl(0deg 0% 88%);
+	--demo-border: hsl(0deg 0% 20%);
+*/
+
+	--demo-footer-color: hsl(215deg 13.79% 34.12%);
 	--demo-font-family: TT Norms Pro, system-ui, sans-serif;
 }
 
@@ -31,7 +44,8 @@ html {
 	-moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-	background-color: var(--demo-page-background);
+	color: var(--demo-secondary-oppo);
+	background-color: var(--demo-secondary-minor);
 	overflow-y: scroll;
 }
 body {
@@ -95,25 +109,29 @@ td:where(:not(:first-child)) {
 }
 thead tr,
 tr:nth-child(2n) {
-	background-color: #f0f0f0;
+	background-color: var(--demo-secondary-minor);
 }
 
 :target {
   scroll-margin-block: 5ex;
 }
 
+svg {
+	color: var(--demo-logo);
+}
+
 /* Demo Styles */
 .demo-main {
-	padding: .75em;
+	padding: var(--demo-gutter);
 	background-color: var(--demo-secondary);
-	border: 1px solid #ddd;
+	border: .125em solid var(--demo-border);
 	border-radius: .75em;
 	margin: 1em 0;
 }
 @media (min-width: 68.75em) {
 	.demo-main {
-		margin-left: calc(-1 * var(--demo-gutter));
-		margin-right: calc(-1 * var(--demo-gutter));
+		margin-left: calc(-1 * var(--demo-gutter) - .125em);
+		margin-right: calc(-1 * var(--demo-gutter) - .125em);
 	}
 }
 
@@ -143,8 +161,8 @@ tr:nth-child(2n) {
 	display: block;
 	width: 100%;
 	background-color: var(--demo-primary);
+	color: var(--demo-primary-oppo);
 	font-weight: 800;
-	color: var(--demo-secondary);
 	font-family: var(--demo-font-family);
 	padding: .5em 1.5em;
 	border-radius: .5em;
@@ -161,7 +179,7 @@ tr:nth-child(2n) {
 .demo-footer {
 	margin: 1rem 0;
 	font-size: .875em;
-	color: var(--demo-footer);
+	color: var(--demo-footer-color);
 }
 .demo-footer ul {
 	display: inline-flex;
@@ -175,7 +193,7 @@ tr:nth-child(2n) {
 	display: block;
 	text-align: center;
 	background-color: var(--demo-primary);
-	color: var(--demo-secondary);
+	color: var(--demo-primary-oppo);
 	text-decoration: none;
 	padding: .5em;
 	padding-left: var(--demo-gutter);
