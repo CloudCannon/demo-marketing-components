@@ -53,12 +53,19 @@ h1, h2, h3, h4, h5 {
 	font-weight: 800;
 	text-wrap: balance;
 }
+:where(h1, h2, h3, h4, h5):first-child {
+	margin-top: 0;
+}
 
 p:first-child {
 	margin-top: 0;
 }
 p:last-child {
 	margin-bottom: 0;
+}
+mark {
+	padding: .125em .25em;
+	border-radius: .25em;
 }
 
 a:where([href]) {
@@ -68,6 +75,12 @@ a:where([href]) {
 input, button,
 textarea, select {
   font: inherit;
+}
+
+pre, code {
+	font-family: Consolas, Menlo, Monaco, Andale Mono, monospace;
+	line-height: 1.5;
+	font-size: inherit;
 }
 
 table {
