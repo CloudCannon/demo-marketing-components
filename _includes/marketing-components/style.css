@@ -80,7 +80,8 @@ th:where(:not(:first-child)),
 td:where(:not(:first-child)) {
 	padding: .5em 1em;
 }
-tr:nth-child(2n+1) {
+thead tr,
+tr:nth-child(2n) {
 	background-color: #fafafa;
 }
 
