@@ -47,28 +47,43 @@ ul,
 ol {
   list-style-type: "";
 }
+
 h1, h2, h3, h4, h5 {
 	font-family: var(--demo-font-family);
 	font-weight: 800;
 	text-wrap: balance;
 }
+
 p:first-child {
 	margin-top: 0;
 }
 p:last-child {
 	margin-bottom: 0;
 }
+
 a:where([href]) {
 	color: inherit;
 }
+
 input, button,
 textarea, select {
   font: inherit;
+}
+
+table {
+	border-collapse: collapse;
+}
+th, td {
+	margin: 0;
 }
 th:where(:not(:first-child)),
 td:where(:not(:first-child)) {
 	padding: .5em 1em;
 }
+tr:nth-child(2n+1) {
+	background-color: #fafafa;
+}
+
 :target {
   scroll-margin-block: 5ex;
 }
