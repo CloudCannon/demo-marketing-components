@@ -65,7 +65,8 @@ input, button,
 textarea, select {
   font: inherit;
 }
-th, td {
+th:where(:not(:first-child)),
+td:where(:not(:first-child)) {
 	padding: .5em 1em;
 }
 :target {
