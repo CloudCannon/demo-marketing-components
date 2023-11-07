@@ -8,6 +8,7 @@ metadata:
   banner:
     text: "New video: <strong>Jamming on the Jamstack with Matt Biilman & Mike Neumegen</strong>"
     url: https://www.youtube.com/watch?v=Hf8lsVtOkcE
+  helmet: ""
 ---
 <!doctype html>
 <html lang="en">
@@ -17,6 +18,9 @@ metadata:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ metadata.description }}">
     <link rel="stylesheet" href="/demo-style.css">
+    {%- if metadata.helmet %}
+    {{ metadata.helmet }}
+    {%- endif %}
   </head>
   <body>
     <header>
