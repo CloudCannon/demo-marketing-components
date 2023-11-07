@@ -1,4 +1,4 @@
-# CloudCannon Style Guide
+# CloudCannon Demos Style Guide
 
 An Eleventy base layout and components to share a codebase for small demos (using site mounting!).
 
