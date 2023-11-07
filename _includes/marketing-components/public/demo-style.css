@@ -225,6 +225,14 @@ img {
 	background-color: inherit;
 	z-index: -1;
 }
+.demo-banner img {
+	display: inline;
+	width: 1.3em;
+	height: 1.3em;
+	object-fit: contain;
+	margin-right: .5em;
+	vertical-align: text-bottom;
+}
 
 /* Overlay */
 details[open].details-overlay {
