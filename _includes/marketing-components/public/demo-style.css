@@ -143,7 +143,6 @@ svg {
 @media (min-width: 68.75em) {
 	.demo-main {
 		margin-left: calc(-1 * var(--demo-gutter) - .125em);
-		margin-right: calc(-1 * var(--demo-gutter) - .125em);
 	}
 }
 
