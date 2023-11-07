@@ -27,6 +27,8 @@ metadata:
         <a href="https://cloudcannon.com/" class="demo-hed-logo">{% include "marketing-components/logo.svg" %}</a>
 
         <nav class="demo-nav">
+          <a href="{{ metadata.cta.url }}" class="demo-btn demo-btn-primary">{{ metadata.cta.text }}</a>
+
           <details class="details-overlay">
             <summary class="demo-btn">Demos</summary>
             <ul>
@@ -35,8 +37,6 @@ metadata:
               <li><a href="https://busy-jellyfish.cloudvent.net/">Geolocation</a></li>
             </ul>
           </details>
-
-          <a href="{{ metadata.cta.url }}" class="demo-btn demo-btn-primary">{{ metadata.cta.text }}</a>
         </nav>
       </div>
 
