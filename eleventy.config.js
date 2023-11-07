@@ -1,9 +1,5 @@
-module.exports = function(eleventyConfig) {
-  // Global Layout
-  eleventyConfig.addGlobalData("layout", "marketing-components/base.liquid");
+const upstreamConfig = require("./_includes/marketing-components/eleventySharedConfig.js");
 
-  // Assets
-  eleventyConfig.addPassthroughCopy({
-    "_includes/marketing-components/public/": "/"
-  });
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(upstreamConfig);
 };
