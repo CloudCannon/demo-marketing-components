@@ -39,6 +39,7 @@
 		--demo-secondary-oppo: hsl(0deg 0% 88%);
 		--demo-border: hsl(0deg 0% 20%);
 		--demo-footer-color: hsl(215deg 13.79% 65.88%);
+		--demo-shadow-hsl: 0deg 0% 20%;
 	}
 }
 
@@ -112,12 +113,13 @@ pre, code {
 table {
 	border-collapse: collapse;
 }
+table {
+	margin-left: -.5em;
+	margin-right: -.5em;
+}
 th, td {
 	margin: 0;
-}
-th:where(:not(:first-child)),
-td:where(:not(:first-child)) {
-	padding: .5em 1em;
+	padding: .25em .5em;
 }
 thead tr,
 tr:nth-child(2n) {
@@ -130,6 +132,13 @@ tr:nth-child(2n) {
 
 svg {
 	color: var(--demo-logo);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
 }
 
 /* Demo Styles */

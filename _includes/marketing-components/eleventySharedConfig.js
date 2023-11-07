@@ -1,3 +1,5 @@
+const path = require("node:path");
+
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addShortcode("currentYear", function() {
 		return (new Date).getFullYear();
@@ -7,7 +9,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addGlobalData("layout", "marketing-components/base.liquid");
 
 	// Assets
-	eleventyConfig.addPassthroughCopy({
-		"_includes/marketing-components/public/": "/"
-	});
+	let pass = {};
+	// use input directory
+	pass[path.join(eleventyConfig.dir.input, "_includes/marketing-components/public/")] = "/";
+	eleventyConfig.addPassthroughCopy(pass);
 }
