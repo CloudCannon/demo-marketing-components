@@ -28,6 +28,7 @@ metadata:
     {%- if metadata.helmet %}
     {{ metadata.helmet }}
     {%- endif %}
+    <script type="module" src="https://esm.sh/@zachleat/details-utils@2.0.2/"></script>
   </head>
   <body>
     <header>
@@ -40,15 +41,17 @@ metadata:
         <nav class="demo-nav">
           <a href="{{ metadata.cta.url }}" class="demo-btn demo-btn-primary">{{ metadata.cta.text }}</a>
 
-          <details class="details-overlay">
-            <summary class="demo-btn">Demos</summary>
-            <ul>
-              <li><a href="https://wandering-cow.cloudvent.net/">Style Guide</a></li>
-              <li><a href="https://ardent-desert.cloudvent.net/">Site Mounting</a></li>
-              <li><a href="https://busy-jellyfish.cloudvent.net/">Geolocation</a></li>
-              <li><a href="https://gnarly-ginger.cloudvent.net/">Image Optimization</a></li>
-            </ul>
-          </details>
+          <details-utils close-click-outside close-esc animate>
+            <details class="details-overlay">
+              <summary class="demo-btn">Demos</summary>
+              <ul class="demo-list">
+                <li><a href="https://wandering-cow.cloudvent.net/">Style Guide</a></li>
+                <li><a href="https://ardent-desert.cloudvent.net/">Site Mounting</a></li>
+                <li><a href="https://busy-jellyfish.cloudvent.net/">Geolocation</a></li>
+                <li><a href="https://gnarly-ginger.cloudvent.net/">Image Optimization</a></li>
+              </ul>
+            </details>
+          </details-utils>
         </nav>
       </div>
 

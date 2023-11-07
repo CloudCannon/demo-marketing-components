@@ -9,8 +9,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addGlobalData("layout", "marketing-components/base.liquid");
 
 	// Assets
-	let pass = {};
-	// use input directory
-	pass[path.join(eleventyConfig.dir.input, "_includes/marketing-components/public/")] = "/";
-	eleventyConfig.addPassthroughCopy(pass);
+	eleventyConfig.addPassthroughCopy({
+		// use input directory
+		[path.join(eleventyConfig.dir.input, "_includes/marketing-components/public/")]: "/",
+	});
 }
