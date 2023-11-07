@@ -16,6 +16,9 @@
 
 :root {
 	--demo-gutter: .75rem;
+	--demo-font-family: TT Norms Pro, system-ui, sans-serif;
+	--demo-font-family-mono: Consolas, Menlo, Monaco, Andale Mono, monospace;
+
 	--demo-primary: hsl(220deg 97.26% 42.94%);
 	--demo-primary-oppo: hsl(0deg 0% 100%);
 
@@ -24,18 +27,20 @@
 	--demo-secondary-minor: hsl(0deg 0% 97.04%);
 	--demo-secondary-oppo: hsl(0deg 0% 12.94%);
 	--demo-border: hsl(0deg 0% 80%);
-/*
-	--demo-logo: hsl(0deg 0% 100%);
-	--demo-secondary: hsl(0deg 0% 7%);
-	--demo-secondary-minor: hsl(0deg 0% 0%);
-	--demo-secondary-oppo: hsl(0deg 0% 88%);
-	--demo-border: hsl(0deg 0% 20%);
-*/
-
 	--demo-footer-color: hsl(215deg 13.79% 34.12%);
-	--demo-font-family: TT Norms Pro, system-ui, sans-serif;
-	--demo-font-family-mono: Consolas, Menlo, Monaco, Andale Mono, monospace;
+
 }
+@media (prefers-color-scheme: dark) {
+	:root {
+		--demo-logo: hsl(0deg 0% 100%);
+		--demo-secondary: hsl(0deg 0% 7%);
+		--demo-secondary-minor: hsl(0deg 0% 0%);
+		--demo-secondary-oppo: hsl(0deg 0% 88%);
+		--demo-border: hsl(0deg 0% 20%);
+		--demo-footer-color: hsl(215deg 13.79% 65.88%);
+	}
+}
+
 
 /* Defaults, some borrowed from https://andy-bell.co.uk/a-more-modern-css-reset/ */
 * {
