@@ -34,6 +34,7 @@
 
 	--demo-footer-color: hsl(215deg 13.79% 34.12%);
 	--demo-font-family: TT Norms Pro, system-ui, sans-serif;
+	--demo-font-family-mono: Consolas, Menlo, Monaco, Andale Mono, monospace;
 }
 
 /* Defaults, some borrowed from https://andy-bell.co.uk/a-more-modern-css-reset/ */
@@ -49,7 +50,7 @@ html {
 	overflow-y: scroll;
 }
 body {
-	font-family: system-ui, sans-serif;
+	font-family: var(--demo-font-family);
 	margin: 0 auto;
 	padding: 0 var(--demo-gutter);
 	max-width: 64em;
@@ -63,7 +64,6 @@ ol {
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: var(--demo-font-family);
 	font-weight: 800;
 	text-wrap: balance;
 }
@@ -92,7 +92,7 @@ textarea, select {
 }
 
 pre, code {
-	font-family: Consolas, Menlo, Monaco, Andale Mono, monospace;
+	font-family: var(--demo-font-family-mono);
 	line-height: 1.5;
 	font-size: inherit;
 }
@@ -125,7 +125,7 @@ svg {
 	padding: var(--demo-gutter);
 	background-color: var(--demo-secondary);
 	border: .125em solid var(--demo-border);
-	border-radius: .75em;
+	border-radius: 0.625em; /* 10px /16 */
 	margin: 1em 0;
 }
 @media (min-width: 68.75em) {
@@ -163,7 +163,6 @@ svg {
 	background-color: var(--demo-primary);
 	color: var(--demo-primary-oppo);
 	font-weight: 800;
-	font-family: var(--demo-font-family);
 	padding: .5em 1.5em;
 	border-radius: .5em;
 	text-decoration: none;
@@ -178,7 +177,6 @@ svg {
 
 .demo-footer {
 	margin: 1rem 0;
-	font-size: .875em;
 	color: var(--demo-footer-color);
 }
 .demo-footer ul {
