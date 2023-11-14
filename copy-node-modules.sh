@@ -1,0 +1,1 @@
+cp node_modules/@zachleat/details-utils/details-utils.js _includes/marketing-components/public/

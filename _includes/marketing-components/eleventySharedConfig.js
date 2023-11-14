@@ -10,8 +10,8 @@ module.exports = function(eleventyConfig) {
 
 	// Assets
 	let publicDirectory = path.join(eleventyConfig.dir.input, eleventyConfig.dir.includes, "marketing-components/public/");
+
 	eleventyConfig.addPassthroughCopy({
-		// use input directory
-		[publicDirectory]: "/",
+		[publicDirectory]: "/public/",
 	});
 }

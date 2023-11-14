@@ -19,16 +19,16 @@ metadata:
     <meta name="description" content="{{ metadata.description }}">
     <meta name="theme-color" content="#034ad8">
 
-    <link rel="apple-touch-startup-image" href="/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="icon" type="image/png" sizes="128x128" href="/favicon-128x128.png">
+    <link rel="apple-touch-startup-image" href="/public/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/public/favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="128x128" href="/public/favicon-128x128.png">
 
-    <link rel="stylesheet" href="/demo-style.css">
+    <link rel="stylesheet" href="/public/demo-style.css">
     {%- if metadata.helmet %}
     {{ metadata.helmet }}
     {%- endif %}
-    <script type="module" src="https://esm.sh/@zachleat/details-utils@2.0.2/"></script>
+    <script type="module" src="/public/details-utils.js"></script>
   </head>
   <body>
     <header>
