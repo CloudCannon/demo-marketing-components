@@ -100,8 +100,10 @@ textarea, select {
 
 pre, code {
 	font-family: var(--demo-font-family-mono);
-	line-height: 1.5;
 	font-size: inherit;
+}
+pre {
+	line-height: 1.5;
 }
 
 table {
