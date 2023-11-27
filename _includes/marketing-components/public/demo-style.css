@@ -50,8 +50,8 @@
 }
 html {
 	-moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
 	color: var(--demo-secondary-oppo);
 	background-color: var(--demo-secondary-minor);
 	overflow-y: scroll;
@@ -65,9 +65,9 @@ body {
 }
 
 /* Defaults */
-ul,
-ol {
-  list-style-type: "";
+ul:not([role="list"]),
+ol:not([role="list"]) {
+	list-style-type: "";
 }
 
 h1, h2, h3, h4, h5 {
@@ -95,7 +95,7 @@ a:where([href]) {
 
 input, button,
 textarea, select {
-  font: inherit;
+	font: inherit;
 }
 
 pre, code {
@@ -123,7 +123,7 @@ tr:nth-child(2n) {
 }
 
 :target {
-  scroll-margin-block: 5ex;
+	scroll-margin-block: 5ex;
 }
 
 svg {
