@@ -56,7 +56,7 @@ metadata:
         </nav>
       </div>
 
-      <h1 class="demo-hed-title">{{ metadata.title }}</h1>
+      <h1 class="demo-hed-title">{{ metadata.titleHtml | default: metadata.title }}</h1>
     </header>
     <main class="demo-main">
       {{ content }}
