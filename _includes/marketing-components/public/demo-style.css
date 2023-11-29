@@ -137,6 +137,21 @@ img {
 	vertical-align: middle;
 }
 
+blockquote {
+	font-family: Georgia, serif;
+	font-size: 1.125em; /* 18px /16 */
+	font-style: italic;
+	margin: 0;
+}
+
+.sr-only {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
 /* Demo Styles */
 .demo-main {
 	padding: var(--demo-gutter);
