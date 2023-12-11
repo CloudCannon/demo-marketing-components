@@ -109,10 +109,6 @@ pre {
 table {
 	border-collapse: collapse;
 }
-table {
-	margin-left: -.5em;
-	margin-right: -.5em;
-}
 th, td {
 	margin: 0;
 	padding: .25em .5em;
@@ -164,6 +160,11 @@ blockquote {
 	.demo-main {
 		margin-left: calc(-1 * var(--demo-gutter) - .125em);
 	}
+}
+
+.demo-inset {
+	margin-left: -.5em;
+	margin-right: -.5em;
 }
 
 .demo-hed {
