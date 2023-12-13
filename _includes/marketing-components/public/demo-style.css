@@ -183,6 +183,7 @@ blockquote {
 .demo-hed-title {
 	flex-grow: 9999;
 	margin: 0;
+	text-wrap: balance;
 }
 .demo-hed-logo {
 	display: flex;
@@ -308,4 +309,9 @@ details[open].details-overlay > :not(summary) {
 	gap: .5em 1em;
 	padding: 0;
 	margin: 0;
+}
+
+/* Utility classes */
+.demo-mb2 {
+	margin-bottom: 1em;
 }
