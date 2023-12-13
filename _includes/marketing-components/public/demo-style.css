@@ -245,7 +245,7 @@ blockquote {
 	background-color: inherit;
 	z-index: -1;
 }
-.demo-banner img {
+.demo-icon {
 	display: inline;
 	width: auto;
 	height: 1.3em;
@@ -253,6 +253,9 @@ blockquote {
 	object-fit: contain;
 	margin-right: .5em;
 	vertical-align: text-bottom;
+}
+.demo-icon-rounded {
+	border-radius: .25em;
 }
 
 /* Overlay */
