@@ -11,24 +11,35 @@ metadata:
       es: "<strong>Hablemos del futuro de Jamstack</strong>"
     url: https://thefutureofjamstack.org/
   i18n:
-    demos:
-      en: Demos
-      es: Demostraciones
-    styleguide:
-      en: Style Guide
-      es: Guía de estilo
-    mount:
-      en: Site Mounting
-      es: Montaje del sitio
-    geo:
-      en: Geolocation
-      es: Geolocalización
-    imageopt:
-      en: Image Optimization
-      es: Optimización de imagen
-    microblog:
-      en: Geolocation
-      es: Geolocalización
+    header:
+      demos:
+        en: Demos
+        es: Demostraciones
+      styleguide:
+        en: Style Guide
+        es: Guía de estilo
+      mount:
+        en: Site Mounting
+        es: Montaje del sitio
+      geo:
+        en: Geolocation
+        es: Geolocalización
+      imageopt:
+        en: Image Optimization
+        es: Optimización de imagen
+      microblog:
+        en: Geolocation
+        es: Geolocalización
+    footer:
+      terms:
+        en: Terms
+        es: Condiciones
+      privacy:
+        en: Privacy
+        es: Privacidad
+      security:
+        en: Security
+        es: Seguridad
   helmet: ""
 ---
 <!doctype html>
@@ -66,13 +77,13 @@ metadata:
 {%- endif %}
           <details-utils close-click-outside close-esc animate>
             <details class="details-overlay">
-              <summary class="demo-btn">{{ metadata.i18n.demos | getI18nString }}</summary>
+              <summary class="demo-btn">{{ metadata.i18n.header.demos | getI18nString }}</summary>
               <ul class="demo-list">
-                <li><a href="https://wandering-cow.cloudvent.net/">{{ metadata.i18n.styleguide | getI18nString }}</a></li>
-                <li><a href="https://ardent-desert.cloudvent.net/">{{ metadata.i18n.mount | getI18nString }}</a></li>
-                <li><a href="https://busy-jellyfish.cloudvent.net/">{{ metadata.i18n.geo | getI18nString }}</a></li>
-                <li><a href="https://gnarly-ginger.cloudvent.net/">{{ metadata.i18n.imageopt | getI18nString }}</a></li>
-                <li><a href="https://rare-pineapple.cloudvent.net/">{{ metadata.i18n.microblog | getI18nString }}</a></li>
+                <li><a href="https://wandering-cow.cloudvent.net/">{{ metadata.i18n.header.styleguide | getI18nString }}</a></li>
+                <li><a href="https://ardent-desert.cloudvent.net/">{{ metadata.i18n.header.mount | getI18nString }}</a></li>
+                <li><a href="https://busy-jellyfish.cloudvent.net/">{{ metadata.i18n.header.geo | getI18nString }}</a></li>
+                <li><a href="https://gnarly-ginger.cloudvent.net/">{{ metadata.i18n.header.imageopt | getI18nString }}</a></li>
+                <li><a href="https://rare-pineapple.cloudvent.net/">{{ metadata.i18n.header.microblog | getI18nString }}</a></li>
               </ul>
             </details>
           </details-utils>
@@ -87,10 +98,10 @@ metadata:
     <footer class="demo-footer">
       <ul class="demo-inline">
         <li>©{% currentYear %} CloudCannon</li>
-        <li><a href="https://cloudcannon.com/terms/">Terms</a></li>
-        <li><a href="https://cloudcannon.com/privacy/">Privacy</a></li>
+        <li><a href="https://cloudcannon.com/terms/">{{ metadata.i18n.footer.terms | getI18nString }}</a></li>
+        <li><a href="https://cloudcannon.com/privacy/">{{ metadata.i18n.footer.privacy | getI18nString }}</a></li>
         <li><a href="https://cloudcannon.com/gdpr/">GDPR</a></li>
-        <li><a href="https://cloudcannon.com/security/">Security</a></li>
+        <li><a href="https://cloudcannon.com/security/">{{ metadata.i18n.footer.security | getI18nString }}</a></li>
         <li><img alt="Favicon for {{ metadata.banner.url }}" loading="lazy" decoding="async" src="https://v1.indieweb-avatar.11ty.dev/{{ "https://www.11ty.dev/" | url_encode }}/" width="40" height="40" class="demo-icon">{{ eleventy.generator }}</li>
       </ul>
     </footer>
