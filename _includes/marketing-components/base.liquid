@@ -6,15 +6,36 @@ metadata:
     text: Return to CloudCannon
     url: "https://cloudcannon.com/"
   banner:
-    text: "<strong>Let’s talk about the future of Jamstack</strong>"
+    text:
+      en: "<strong>Let’s talk about the future of Jamstack</strong>"
+      es: "<strong>Hablemos del futuro de Jamstack</strong>"
     url: https://thefutureofjamstack.org/
+  i18n:
+    demos:
+      en: Demos
+      es: Demostraciones
+    styleguide:
+      en: Style Guide
+      es: Guía de estilo
+    mount:
+      en: Site Mounting
+      es: Montaje del sitio
+    geo:
+      en: Geolocation
+      es: Geolocalización
+    imageopt:
+      en: Image Optimization
+      es: Optimización de imagen
+    microblog:
+      en: Geolocation
+      es: Geolocalización
   helmet: ""
 ---
 <!doctype html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8">
-    <title>{{ metadata.title }}</title>
+    <title>{{ title | default: metadata.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ metadata.description }}">
     <meta name="theme-color" content="#034ad8">
@@ -33,7 +54,7 @@ metadata:
   <body>
     <header>
 {% if metadata.banner %}
-      <a href="{{ metadata.banner.url }}" class="demo-banner"><img alt="Favicon for {{ metadata.banner.url }}" loading="lazy" decoding="async" src="https://v1.indieweb-avatar.11ty.dev/{{ metadata.banner.url | url_encode }}/" width="40" height="40">{{ metadata.banner.text }}</a>
+      <a href="{{ metadata.banner.url }}" class="demo-banner"><img alt="Favicon for {{ metadata.banner.url }}" loading="lazy" decoding="async" src="https://v1.indieweb-avatar.11ty.dev/{{ metadata.banner.url | url_encode }}/" width="40" height="40">{{ metadata.banner.text | getI18nString }}</a>
 {% endif %}
       <div class="demo-hed">
         <a href="https://cloudcannon.com/" class="demo-hed-logo">{% include "marketing-components/logo.svg" %}</a>
@@ -44,13 +65,13 @@ metadata:
 {%- endif %}
           <details-utils close-click-outside close-esc animate>
             <details class="details-overlay">
-              <summary class="demo-btn">Demos</summary>
+              <summary class="demo-btn">{{ metadata.i18n.demos | getI18nString }}</summary>
               <ul class="demo-list">
-                <li><a href="https://wandering-cow.cloudvent.net/">Style Guide</a></li>
-                <li><a href="https://ardent-desert.cloudvent.net/">Site Mounting</a></li>
-                <li><a href="https://busy-jellyfish.cloudvent.net/">Geolocation</a></li>
-                <li><a href="https://gnarly-ginger.cloudvent.net/">Image Optimization</a></li>
-                <li><a href="https://rare-pineapple.cloudvent.net/">Microblog</a></li>
+                <li><a href="https://wandering-cow.cloudvent.net/">{{ metadata.i18n.styleguide | getI18nString }}</a></li>
+                <li><a href="https://ardent-desert.cloudvent.net/">{{ metadata.i18n.mount | getI18nString }}</a></li>
+                <li><a href="https://busy-jellyfish.cloudvent.net/">{{ metadata.i18n.geo | getI18nString }}</a></li>
+                <li><a href="https://gnarly-ginger.cloudvent.net/">{{ metadata.i18n.imageopt | getI18nString }}</a></li>
+                <li><a href="https://rare-pineapple.cloudvent.net/">{{ metadata.i18n.microblog | getI18nString }}</a></li>
               </ul>
             </details>
           </details-utils>

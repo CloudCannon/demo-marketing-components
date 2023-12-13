@@ -103,7 +103,9 @@ pre, code {
 	font-size: inherit;
 }
 pre {
+	display: block;
 	line-height: 1.5;
+	overflow-x: auto;
 }
 
 table {
@@ -227,7 +229,7 @@ blockquote {
 	margin-left: calc(-1 * var(--demo-gutter));
 	margin-right: calc(-1 * var(--demo-gutter));
 	margin-bottom: calc(3 * var(--demo-gutter));
-	line-height: 1.4;
+	line-height: 1.3;
 }
 .demo-banner:hover,
 .demo-banner:active {
@@ -245,8 +247,9 @@ blockquote {
 }
 .demo-banner img {
 	display: inline;
-	width: 1.3em;
+	width: auto;
 	height: 1.3em;
+	height: 1lh;
 	object-fit: contain;
 	margin-right: .5em;
 	vertical-align: text-bottom;
