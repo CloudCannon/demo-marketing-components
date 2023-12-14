@@ -223,6 +223,9 @@ hr {
 	margin: 1rem 0;
 	color: var(--demo-footer-color);
 }
+.demo-footer a[href] {
+	padding: .5em 0;
+}
 
 .demo-banner {
 	display: block;
