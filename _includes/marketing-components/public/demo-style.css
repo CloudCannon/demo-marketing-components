@@ -142,6 +142,12 @@ blockquote {
 	margin: 0;
 }
 
+hr {
+	border: none;
+	border-top: 1px solid var(--demo-border);
+	margin: 1em 0;
+}
+
 .sr-only {
 	position: absolute;
 	height: 1px;
