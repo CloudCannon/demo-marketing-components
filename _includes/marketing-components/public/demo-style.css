@@ -224,6 +224,8 @@ hr {
 	color: var(--demo-footer-color);
 }
 .demo-footer a[href] {
+	display: inline-block;
+	min-width: 3em;
 	padding: .5em 0;
 }
 
@@ -314,6 +316,7 @@ details[open].details-overlay > :not(summary) {
 }
 .demo-inline {
 	display: inline-flex;
+	align-items: center;
 	flex-wrap: wrap;
 	gap: .5em 1em;
 	padding: 0;
