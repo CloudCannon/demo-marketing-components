@@ -327,3 +327,14 @@ details[open].details-overlay > :not(summary) {
 .demo-mb2 {
 	margin-bottom: 1em;
 }
+
+/* Pagefind Dark mode */
+@media (prefers-color-scheme: dark) {
+	pagefind-search {
+		--pagefind-ui-primary: var(--demo-secondary-oppo);;
+		--pagefind-ui-text: var(--demo-secondary-oppo);;
+		--pagefind-ui-background: var(--demo-secondary-minor);
+		--pagefind-ui-border: var(--demo-secondary-minor);
+		--pagefind-ui-tag: var(--demo-secondary-minor);
+	}
+}
