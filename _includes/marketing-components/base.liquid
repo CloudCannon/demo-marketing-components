@@ -30,6 +30,9 @@ metadata:
       microblog:
         en: Geolocation
         es: Geolocalización
+      i18n:
+        en: Internationalization (i18n)
+        es: Internacionalización (i18n)
     footer:
       terms:
         en: Terms
@@ -69,7 +72,9 @@ metadata:
       <a href="{{ metadata.banner.url }}" class="demo-banner"><img alt="Favicon for {{ metadata.banner.url }}" loading="lazy" decoding="async" src="https://v1.indieweb-avatar.11ty.dev/{{ metadata.banner.url | url_encode }}/" width="40" height="40" class="demo-icon demo-icon-rounded">{{ metadata.banner.text | getI18nString }}</a>
 {% endif %}
       <div class="demo-hed">
-        <a href="https://cloudcannon.com/" class="demo-hed-logo">{% include "marketing-components/logo.svg" %}</a>
+        <a href="https://cloudcannon.com/" class="demo-hed-logo">
+          {%- include "marketing-components/logo.svg" -%}
+        </a>
 
         <nav class="demo-nav">
 {%- if metadata.cta.url and metadata.cta.text %}
@@ -84,6 +89,7 @@ metadata:
                 <li><a href="https://busy-jellyfish.cloudvent.net/">{{ metadata.i18n.header.geo | getI18nString }}</a></li>
                 <li><a href="https://gnarly-ginger.cloudvent.net/">{{ metadata.i18n.header.imageopt | getI18nString }}</a></li>
                 <li><a href="https://rare-pineapple.cloudvent.net/">{{ metadata.i18n.header.microblog | getI18nString }}</a></li>
+                <li><a href="https://fluent-reef.cloudvent.net/">{{ metadata.i18n.header.i18n | getI18nString }}</a></li>
               </ul>
             </details>
           </details-utils>
